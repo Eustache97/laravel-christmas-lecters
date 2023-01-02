@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Lecter extends Model
 {
     use HasFactory;
+    protected $fillable = ['childrenName', 'childrenSurname', 'adress', 'city', 'arrivalDate', 'present', 'text', 'rating', 'consegned'];
 }

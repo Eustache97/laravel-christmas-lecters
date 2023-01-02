@@ -26,7 +26,7 @@ class LecterController extends Controller
      */
     public function create()
     {
-        //
+        return view('lecters.create');
     }
 
     /**
@@ -37,7 +37,11 @@ class LecterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formData = $request->all();
+        $newLecter = new Lecter();
+        $newLecter->fill($formData);
+        $newLecter->save();
+        return redirect()->route('lecters.show', $newLecter->id);
     }
 
     /**

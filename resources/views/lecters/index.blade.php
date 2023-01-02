@@ -2,6 +2,9 @@
 @section('content')
     <div class="container">
         <h2>Lista delle lettere</h2>
+        <div class="text-end mb-2">
+            <a class="btn btn-primary" href="{{ route('lecters.create') }}">Crea una nuova lettera</a>
+        </div>
         <table class="table table-danger table-striped">
             <thead>
                 <tr>
