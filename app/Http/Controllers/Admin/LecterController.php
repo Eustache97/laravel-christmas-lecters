@@ -61,9 +61,9 @@ class LecterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Lecter $lecter)
     {
-        //
+        return view('lecters.edit', compact('lecter'));
     }
 
     /**
@@ -73,9 +73,11 @@ class LecterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Lecter $lecter)
     {
-        //
+        $formData = $request->all();
+        $lecter->update($formData);
+        return redirect()->route('lecters.show', $lecter->id);
     }
 
     /**

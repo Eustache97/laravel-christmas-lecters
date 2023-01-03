@@ -22,6 +22,7 @@
                         <td>{{ $lecter->arrivalDate }}</td>
                         <td>
                             <a class="btn btn-primary" href="{{ route('lecters.show', $lecter->id) }}">Dettagli</a>
+                            <a class="btn btn-success" href="{{ route('lecters.edit', $lecter->id) }}">Modifica</a>
                         </td>
                     </tr>
                 @endforeach
