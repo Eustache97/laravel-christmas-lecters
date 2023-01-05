@@ -26,7 +26,9 @@
                             <form action="{{ route('lecters.destroy', $lecter->id) }}" method="POST" class="d-inline">
                                 @method('DELETE')
                                 @csrf
-                                <button class="btn btn-danger delete-btn" type="submit">Cancella</button>
+                                <button class="btn btn-danger delete-btn" type="submit"
+                                    data-lecter-childrenName="{{ $lecter->childrenName }}"
+                                    data-lecter-id="{{ $lecter->id }}">Cancella</button>
                             </form>
                         </td>
                     </tr>
@@ -35,4 +37,5 @@
             </tbody>
         </table>
     </div>
+    @include('partials.delete-modal')
 @endsection
