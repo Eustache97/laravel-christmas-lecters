@@ -86,8 +86,9 @@ class LecterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Lecter $lecter)
     {
-        //
+        $lecter->delete();
+        return redirect()->route('lecters.index');
     }
 }

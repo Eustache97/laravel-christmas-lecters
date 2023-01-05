@@ -23,6 +23,11 @@
                         <td>
                             <a class="btn btn-primary" href="{{ route('lecters.show', $lecter->id) }}">Dettagli</a>
                             <a class="btn btn-success" href="{{ route('lecters.edit', $lecter->id) }}">Modifica</a>
+                            <form action="{{ route('lecters.destroy', $lecter->id) }}" method="POST" class="d-inline">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-danger delete-btn" type="submit">Cancella</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
