@@ -1,0 +1,52 @@
+#header-grad{
+    width: 100%;
+    background-image: linear-gradient(white, red);
+    .container{
+        .header-div{
+            height: 300px;
+            width: 100%;
+            background-image: url("/public/img/natale.jpg");
+            background-position: center;
+            background-size: 100% 300px;
+            .layer{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                background-color: rgba($color: #000000, $alpha: 0.2);
+                .nav{
+                    height: 50px;
+                    width: 100%;
+                    background-color: rgba($color: #000000, $alpha: 0.4);
+                    ul{
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        gap: 1em; 
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        li{
+                            a{
+                                color: white;
+                                display: inline-block;
+                                &:hover{
+                                    color: red;
+                                    
+                                }
+                                &.active{
+                                    color: #0282F9;;
+                                    border-bottom: 3px solid #0282F9;
+                                    margin-bottom: .2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+                
+        }
+        
+    }
+}
