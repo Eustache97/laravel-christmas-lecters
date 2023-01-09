@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('present', 350);
             $table->text('text')->nullable();
             $table->tinyInteger('rating');
-            $table->boolean('consegned')->default(false);
+            $table->boolean('consegned')->nullable()->default(false);
             $table->timestamps();
         });
     }
